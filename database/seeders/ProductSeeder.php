@@ -12,11 +12,13 @@ class ProductSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
-        $tenantId = 2;
+   {
 
         Product::factory(5)->create([
-            'tenant_id' => $tenantId,
+            'tenant_id' => 1,
+        ]);
+        Product::factory(5)->create([
+            'tenant_id' => 2,
         ]);
     }
 }
